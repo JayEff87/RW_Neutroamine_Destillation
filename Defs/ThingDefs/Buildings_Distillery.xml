@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+   
+  <ThingDef Name="BenchBase" ParentName="BuildingBase" Abstract="True">
+    <castEdgeShadows>true</castEdgeShadows>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+  </ThingDef>
+  
+   <ThingDef ParentName="BenchBase">
+		<defName>Distillery</defName>
+      <ThingClass>Neutroamine_Distilling.Distillery</ThingClass>
+      <label>Distillery</label>
+      <description>A set of distilling utensils</description>
+      <graphicData>
+         <texPath>Things/Building/Distillery</texPath>
+         <graphicClass>Graphic_Single</graphicClass>
+         <drawSize>(3.5,1.5)</drawSize>
+         <damageData>
+            <rect>(0.05,0.05,0.95,0.95</rect>
+         </damageData>
+      </graphicData>
+      <tickerType>Rare</tickerType>
+      <altitudeLayer>Building</altitudeLayer>
+      <Passability>PassThroughOnly</Passability>
+      <pathCost>70</pathCost>
+      <useHitPoints>True</useHitPoints>
+      <fillPercent>0.5</fillPercent>
+      <castEdgeShadows>true</castEdgeShadows>
+      <statBases>
+         <MaxHitPoints>350</MaxHitPoints>
+         <WorkToMake>200</WorkToMake>
+         <Flammability>0.5</Flammability>
+         <Beauty>-2</Beauty>
+      </statBases>
+      <size>(3,1)</size>
+      <selectable>true</selectable>
+      <rotatable>true</rotatable>
+      <hasInteractionCell>True</hasInteractionCell>
+      <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+      <designationCategory>Production</designationCategory>
+      <building>
+         <ignoreNeedsPower>true</ignoreNeedsPower>
+      </building>
+      <costList>
+         <Steel>30</Steel>
+         <WoodLog>100</WoodLog>
+      </costList>
+      <constructEffect>ConstructWood</constructEffect>
+      <killedLeavings>
+         <WoodLog>50</WoodLog>
+         <Steel>15</Steel>
+      </killedLeavings>
+      <inspectorTabs>
+         <li>ITab_Bills</li>
+      </inspectorTabs>
+      <surfaceType>Item</surfaceType>
+      <recipes>
+         <li>CookMealSimple</li>
+      </recipes>
+      <comps>
+      </comps>
+   </ThingDef>
+</Buildings>

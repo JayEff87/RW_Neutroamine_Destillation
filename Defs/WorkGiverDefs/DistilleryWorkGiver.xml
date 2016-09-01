@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+  <WorkGiverDef>
+    <defName>DoBillsDistillery</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Distillery</li>
+    </fixedBillGiverDefs>
+    <verb>distil at</verb>
+    <gerund>distilling at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+ </WorkGivers>

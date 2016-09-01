@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+  <RecipeDef>
+    <defName>NeutroamineDestillation</defName>
+    <label>Distil Neutroamine</label>
+    <description>Distil Neutroamine from alcoholic neutroamine solution</description>
+    <jobString>Distilling Neutroamine</jobString>
+    <workAmount>10000</workAmount>
+    <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Beer</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <products>
+      <Neutroamine>1</Neutroamine>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Beer</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+   <recipeUsers>
+      <li>Distillery</li>
+   </recipeUsers>
+   <skillRequirements>
+      <li>
+         <skill>Cooking</skill>
+         <minLevel>1</minLevel>
+      </li>
+   </skillRequirements>
+  </RecipeDef>
+</RecipeDefs>
